@@ -27,6 +27,7 @@ def do_quiz():
 
 #start quiz by choosing difficulty and answer the question
 def quiz_start(quiz,answer):
+    print quiz
     user_input = raw_input("Your answer(please seperate each word with a space): ").split()
     user_answer = quiz
     while [x.lower() for x in user_input] != [x.lower() for x in answer]:
