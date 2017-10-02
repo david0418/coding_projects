@@ -8,8 +8,6 @@ answer_medium = ['Gravity','mass','planets','stars']
 hard_quiz = "The ___ ___ is a physical constant that is the quantum of action, central in ___ ___"
 answer_hard = ['Plank','constant','quantum','mechanics']
 
-from time import sleep
-from random import randint
 #Using the following function to choose the level of difficulties of the quizs and start doing your quiz
 def do_quiz():
     user_input = None
