@@ -28,12 +28,13 @@ def do_quiz():
 #start quiz by choosing difficulty and answer the question
 def quiz_start(quiz,answer):
     print quiz
-    user_input = raw_input("Your answer(please seperate each word with a space): ").split()
     user_answer = quiz
-    while [x.lower() for x in user_input] != [x.lower() for x in answer]:
-        print "You are wrong! do it again"
-        user_input = raw_input("Your answer(please seperate each word with a space): ").split()
     for i in range(len(answer)):
+        user_input = raw_input("Your answer for blank"+ str(i+1) + ": ")
+        while user_input.lower() != answer[i].lower():
+            print "You are wrong! do it again"
+            user_input = raw_input("Your answer for blank"+ str(i+1) + ": ")
         user_answer = user_answer.replace("___",answer[i],1)
-    print "Congrats, "+ user_answer
+        print user_answer
+    print "Congrats, you pass this quiz"
 do_quiz()
