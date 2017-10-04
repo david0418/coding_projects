@@ -8,25 +8,30 @@ answer_medium = ['Gravity','mass','planets','stars']
 hard_quiz = "The ___ ___ is a physical constant that is the quantum of action, central in ___ ___"
 answer_hard = ['Plank','constant','quantum','mechanics']
 
-#Using the following function to choose the level of difficulties of the quizs and start doing your quiz
+
 def do_quiz():
+    '''
+    Using the following function to choose the level of difficulties of the quizs and start doing your quiz
+    '''
     user_input = None
     while user_input not in [1,2,3]:
         user_input = raw_input("Select 1 for easy, select 2 for medium, select 3 for hard: ")
         if user_input == "1":
             print "easy mode selected"
-            return quiz_start(easy_quiz,answer_easy)
+            quiz_start(easy_quiz,answer_easy)
         elif user_input == "2":
             print "medium mode selected"
-            return quiz_start(medium_quiz,answer_medium)
+            quiz_start(medium_quiz,answer_medium)
         elif user_input == "3":
             print "hard mode selected"
-            return quiz_start(hard_quiz,answer_hard)
+            quiz_start(hard_quiz,answer_hard)
         else:
             print "Invaild input, please type in numbers and do it again"
 
-#start quiz by choosing difficulty and answer the question
 def quiz_start(quiz,answer):
+    '''
+    start quiz by choosing difficulty and answer the question
+    '''
     print quiz
     user_answer = quiz
     for i in range(len(answer)):
